@@ -1,0 +1,35 @@
+:root {
+  /* 默认主题（深色模式） */
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --primary-color: #646cff;
+  --border-color: #333333;
+  --content-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* 浅色模式 */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #646cff;
+    --border-color: #e0e0e0;
+    --content-bg: rgba(0, 0, 0, 0.05);
+  }
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.content {
+  background-color: var(--content-bg);
+}

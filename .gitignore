@@ -1,0 +1,73 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- .NET / ASP.NET / Rider ---
+# Build outputs
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+publish/
+out/
+
+# NuGet
+*.nupkg
+*.snupkg
+.project.assets.json
+.packages/
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Rider / ReSharper
+.idea/
+*.DotSettings.user
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# VS Code (若已存在可保留)
+.vscode/
+
+# MSBuild Binary & Structured Logs
+*.binlog
+*.log
+
+# Local secrets & env
+secrets.json
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+bun.lock
+
+.vercel
