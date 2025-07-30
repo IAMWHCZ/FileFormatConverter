@@ -7,6 +7,9 @@ using Serilog;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.ApplySerilog();
+
+builder.Services.AddEndpoints(typeof(Program).Assembly);
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -28,5 +31,7 @@ app.UseSerilogRequestLogging(options =>
 });
 
 builder.LogStartupInfo();
+
+app.MapEndpoints();
 
 await app.RunAsync();
