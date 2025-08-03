@@ -1,11 +1,16 @@
+using FileFormatConverter.Shared.Entities;
+
 namespace FileFormatConverter.Domain.Data;
 
-public class ApplicationDbContext(DbContextOptions<ApplicationDbContext>  options):DbContext(options)
+public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options)
 {
+    public DbSet<FileSwitchRelation> FileSwitchRelations { get; set; }
+    public DbSet<SupportFileType> SupportFileTypes { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        
+
         // 将所有表名和字段名转换为snake_case格式
         foreach (var entity in modelBuilder.Model.GetEntityTypes())
         {
@@ -21,10 +26,9 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext>  option
             {
                 property.SetColumnName(ToSnakeCase(property.GetColumnName()));
             }
-            
         }
     }
-    
+
     private static string ToSnakeCase(string input)
     {
         if (string.IsNullOrEmpty(input)) return input;

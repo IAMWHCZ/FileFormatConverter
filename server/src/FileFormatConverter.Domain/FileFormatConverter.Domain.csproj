@@ -10,4 +10,9 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="9.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FileFormatConverter.Core\FileFormatConverter.Core.csproj" />
+    <ProjectReference Include="..\FileFormatConverter.Shared\FileFormatConverter.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

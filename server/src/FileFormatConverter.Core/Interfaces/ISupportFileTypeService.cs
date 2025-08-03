@@ -1,4 +1,4 @@
-using FileFormatConverter.Domain.Entities;
+using FileFormatConverter.Shared.Entities;
 
 namespace FileFormatConverter.Domain.Interfaces;
 

@@ -1,6 +1,6 @@
 using FileFormatConverter.Domain.Bases;
 
-namespace FileFormatConverter.Domain.Entities;
+namespace FileFormatConverter.Shared.Entities;
 
 public class FileSwitchRelation:Entity
 {
